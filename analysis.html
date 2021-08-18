@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>Analaysis and Results</title>
+    <style media="screen">
+      body{
+        
+        font-size:18px;
+      }
+      img{
+        margin-left:400px;
+      }
+      span{
+         margin-left:550px;
+         font-weight: bold;
+      }
+      #analysis
+      {
+        margin-left: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <!----navbar------>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <a class="navbar-brand navbar-logo" href="#">OS J Component</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+              <li class="nav-item">
+                  <a class="nav-link" href="home.html"><i class="fas fa-home"></i>Home</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" href="info.html"><i class="fa fa-info-circle"></i>Info</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" href="Scheduling_algorithms.html"><i class="far fa-clone"></i>Algorithms</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="analysis.html"><i class="fa fa-area-chart"></i>Analysis</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="https://theaiplayground.com/mnairmeghna/bot/OS-Chat-Bot/view"><i class="fa fa-android"></i>Chatbot</a>
+          </li>
+            
+              
+          </ul>
+      </div>
+  </nav>
+    <!-------analysis---------->
+    <h1 style="text-align:center; margin-top: 10px;"> Results and Analysis of Algorithms </h1>
+    <section id="analysis">
+    <p> Considering the viability and feasibility, we have considered five conventional CPU scheduling algorithms which include
+        FCFS, SJF, RR, Prioirty and SRTF algorithms. We computed the code and algorithm to execute these algorithms through C coded
+        language and compared the results obtained. On analysing we realised that each of these algorithms in one way or the other
+        does possess a major drawback which tends to hamper and reduce the efficiency of the CPU and the system to its entirety.
+    </p>
+    <p>Furthermore, to ensure that the computerised algorithms match the concept and logic of the algorithm, we have manually compared
+       the calculations for each algorithm for a given set of processes, arrival times, and burst times. Given below are the results obtained
+       for the conventional algorithms which we have coded using C++.
+    </p>
+    <br>
+    <br>
+    <img src="input.png" height="300" width="500" healt="">
+    <br>
+    <span>Details pertaining to processes</span>
+
+    <br>
+    <br>
+    <img src="fcfs.png" height="200" width="500" healt="">
+    <br>
+    <span>Results of FCFS Algorithm</span>
+
+    <br>
+    <br>
+    <img src="sjf.png" height="200" width="500" healt="">
+    <br>
+    <span>Results of SJF Algorithm</span>
+
+    <br>
+    <br>
+    <img src="srtf.png" height="200" width="500" healt="">
+    <br>
+    <span>Results of SRTF Algorithm</span>
+
+    <br>
+    <br>
+    <img src="rr.png" height="200" width="500" healt="">
+    <br>
+    <span>Results of RR Algorithm</span>
+
+    <br>
+    <br>
+    <img src="priority.png" height="200" width="500" healt="">
+    <br>
+    <span>Results of Priority Algorithm</span>
+    <br>
+    <br>
+    <br>
+    <p> After the successful implementation of programs for each of the CPU scheduling algorithms, and on comparing the turnaround
+        time and waiting time for the scheduled processes, we can clearly say that the proposed hybrid algorithm is comparatively
+        more efficient in majority of the cases as it requires reduced turnaround time and waiting time in most of the cases. This is because the hybrid
+        algorithm is an amalgamation of both SJF and priority algorithms. If the arrival time of all the processes is the same,
+        then the hybrid algorithm adopts the SJF approach.
+    </p>
+    <br>
+    <img src="hybrid.png" height="200" width="500" healt="">
+    <br>
+    <span>Results of Hybrid Algorithm</span>
+    </section>
+    <div class="footer">
+      <p style="text-align: left;"> &nbsp; &nbsp; &copy; OS J component <span class="tab" style="margin-left:180px;"> Made with <i style="color: red;" class="fa fa-heart fa-1x fa-beat" aria-hidden="true"></i><br> <span style="margin-left:560px;"><b>G Harika Sai  &nbsp |  Neha Bheemisetty  &nbsp |  Meghna Manoj Nair</b></span></span></p>
+    </div>
+  </body>
+</html>

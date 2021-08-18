@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Girassol' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Goudy Bookletter 1911' rel='stylesheet'>
+    <title>Info</title>
+    <style>
+      #info{
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+      h3
+      {
+      font-weight: bold;
+      }
+      p{
+        font-size: larger;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#">OS J Component</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="info.html"><i class="fa fa-info-circle"></i>Info</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Scheduling_algorithms.html"><i class="far fa-clone"></i>Algorithms</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="analysis.html"><i class="fa fa-area-chart"></i>Analysis</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="https://theaiplayground.com/mnairmeghna/bot/OS-Chat-Bot/view"><i class="fa fa-android"></i>Chatbot</a>
+            </li>
+
+            </ul>
+        </div>
+    </nav>
+  <h1 style="text-align:center; margin-top: 2%;">CPU Scheduling and CPU Scheduling Algorithms</h1>
+  <section id="info">
+  <div>
+  
+  <h3 style="text-transform: uppercase;">CPU Scheduling</h3>
+<p>
+  CPU scheduling is a process that allows one process to use the CPU while the execution of another process is on hold (in waiting state) due to unavailability of any resource like I/O etc., thereby making full use of CPU. The aim of CPU scheduling is to make the system efficient, fast, and fair. 
+
+  Whenever the CPU becomes idle, the operating system must select one of the processes in the ready queue to be executed. The selection process is carried out by the short-term scheduler (or CPU scheduler). The scheduler selects from among the processes in memory that are ready to execute and allocates the CPU to one of them.
+</p>
+</div>
+<div>
+<h3>Fisrt Come First Serve</h3>
+<p>This is the simplest CPU Scheduling algorithm. 
+
+The process which requests the CPU first is allocated the CPU first. 
+
+Implementation of FCFS is managed with the FIFO (First in First Out) queue. 
+
+Average waiting time for the FCFS is quite long.  
+
+ 
+FCFS Scheduling algorithm is non-preemptive. 
+
+FCFS algorithm is thus particularly troublesome for time-sharing systems, where it is important that each user get a share of the CPU at the regular intervals. 
+
+It would be disastrous to allow one process to keep the CPU for an extended period. </p>
+</div>
+<div>
+<h3>Shortest Job First</h3>
+<p>The algorithm associates with each process the length of the process’s next CPU burst. 
+
+When the CPU is available, it is assigned to the process that has the smallest next CPU burst. 
+
+If the next CPU bursts of two processes are the same, FCFS scheduling is used to break the tie. 
+
+SJF also can be either preemptive or non-preemptive. </p>
+</div>
+<div>
+<h3>Priority Scheduling</h3>
+<p>Priority scheduling is a non-preemptive algorithm. 
+
+And it is one of the most common scheduling algorithms. 
+
+Each process is assigned a priority. Process with highest priority is to be executed first and so on. 
+
+Processes with same priority are executed on first come first served basis. 
+
+Priority can be decided based on memory requirements, time requirements or any other resource requirement</p>
+</div>
+<div>
+<h3>Round Robin Scheduling</h3>
+<p>Round Robin is the preemptive process scheduling algorithm. 
+
+Each process is provided a fix time to execute, it is called a quantum. 
+
+Once a process is executed for a given time period, it is preempted and other process executes for a given time period. 
+
+Context switching is used to save states of preempted processes. 
+</p>
+</div>
+</section>
+    <div class="footer">
+        <p style="text-align: left;"> &nbsp; &nbsp; &copy; OS J component <span class="tab" style="margin-left:180px;"> Made with <i style="color: red;" class="fa fa-heart fa-1x fa-beat" aria-hidden="true"></i><br> <span style="margin-left:560px;"><b>G Harika Sai  &nbsp |  Neha Bheemisetty  &nbsp |  Meghna Manoj Nair</b></span></span></p>
+      </div>
+
+      <script>
+        // ---------Responsive-navbar-active-animation-----------
+        function test(){
+          var tabsNewAnim = $('#navbarSupportedContent');
+          var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+          var activeItemNewAnim = tabsNewAnim.find('.active');
+          var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+          var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+          var itemPosNewAnimTop = activeItemNewAnim.position();
+          var itemPosNewAnimLeft = activeItemNewAnim.position();
+          $(".hori-selector").css({
+            "top":itemPosNewAnimTop.top + "px", 
+            "left":itemPosNewAnimLeft.left + "px",
+            "height": activeWidthNewAnimHeight + "px",
+            "width": activeWidthNewAnimWidth + "px"
+          });
+          $("#navbarSupportedContent").on("click","li",function(e){
+            $('#navbarSupportedContent ul li').removeClass("active");
+            $(this).addClass('active');
+            var activeWidthNewAnimHeight = $(this).innerHeight();
+            var activeWidthNewAnimWidth = $(this).innerWidth();
+            var itemPosNewAnimTop = $(this).position();
+            var itemPosNewAnimLeft = $(this).position();
+            $(".hori-selector").css({
+              "top":itemPosNewAnimTop.top + "px", 
+              "left":itemPosNewAnimLeft.left + "px",
+              "height": activeWidthNewAnimHeight + "px",
+              "width": activeWidthNewAnimWidth + "px"
+            });
+          });
+        }
+        $(document).ready(function(){
+          setTimeout(function(){ test(); });
+        });
+        $(window).on('resize', function(){
+          setTimeout(function(){ test(); }, 500);
+        });
+        $(".navbar-toggler").click(function(){
+          setTimeout(function(){ test(); });
+        });
+                
+    </script>
+</body>
+</html>
